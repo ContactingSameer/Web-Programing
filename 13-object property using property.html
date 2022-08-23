@@ -1,0 +1,19 @@
+Program 13 create webpage to access object properties using property
+
+
+
+<html>
+<body>
+<p>There are two different ways to access an object property:</p>
+<p>You can use person.property or person["property"].</p>
+<p id="demo"></p>
+<script>
+var person={
+firstname:"John",
+lastname:"Doe",
+id:5566
+};
+document.getElementById("demo").innerHTML=person.firstname+" "+person.lastname;
+</script>
+</body>
+</html>

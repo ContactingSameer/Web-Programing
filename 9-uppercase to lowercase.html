@@ -1,0 +1,60 @@
+Program 9
+Write a program to convert lowers case to uppercase string
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program No 09</title>
+</head>
+
+<body>
+    <center>
+
+        <h2>Lower case to upper case</h2>
+        <form action="" name="caseconversion">
+            <table border="2" cellpadding="5" cellspacing="5">
+                <tr>
+                    <td><strong>Enter the text : </strong></td>
+                    <td><input type="text" name="content" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" name="convert" id="" value="Click to Convert to Uppercase"
+                            onclick="conversion()">
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </form>
+    </center>
+
+</body>
+<script>
+    function conversion() {
+        var orgtext = document.caseconversion.content.value;
+        var convtext;
+        var lc = /[a-z]/;
+        var uc = /[A-Z]/;
+        if ((orgtext.search(uc) == -1) && (orgtext.search(lc) != 1)) {
+            convtext = orgtext.toUpperCase();
+            alert("Converted text is " + convtext);
+        } else if ((orgtext.search(uc) != 1) && (orgtext.search(lc) == -1)) {
+            alert("text already in uppercase ");
+        } else {
+            alert("Text contains of mixed character");
+            convtext = orgtext.toUpperCase();
+            alert("converted text is " + convtext);
+        }
+    }
+</script>
+
+</html>

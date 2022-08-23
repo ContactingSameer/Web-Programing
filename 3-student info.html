@@ -1,0 +1,74 @@
+Program 3
+Create a form for student information write the javascod to calculate the average grade and result
+
+
+
+
+<html>
+<head>
+</head>
+<body>
+<h1>Students details</h1>
+<form name="student">
+<table>
+<tr>
+<td>Name</td>
+<td><input type="text" name="studname"></td>
+</tr>
+<tr>
+<td>System Programming</td>
+<td><input type="text" name="sp"></td>
+</tr>
+<tr>
+<td>Machine Learning</td>
+<td><input type="text" name="ml"></td>
+</tr>
+<tr>
+<td>Web Programming</td>
+<td><input type="text" name="wp"></td>
+</tr>
+</table>
+<input type="button" value="Calculate" onclick="cal()">
+</form>
+<script>
+function cal()
+{
+var inp1=document.student.studname.value;
+var sp=parseInt(document.student.sp.value);
+var wp=parseInt(document.student.wp.value);
+var ml=parseInt(document.student.ml.value);
+var avg=(sp+wp+ml)/3;
+var grade, result;
+if (sp<40 || wp<40 || ml<40)
+{
+grade="D";
+result="fail";
+}
+else if (avg>=60)
+{
+grade="A";
+result="pass";
+}
+else if (avg>=50)
+{
+grade="B";
+result="pass";
+}
+else if (avg>=40)
+{
+grade="C";
+result="pass";
+}
+else
+{
+grade="D";
+result="fail";
+}
+document.writeln("<pre>Name:"+inp1+"</pre>");
+document.writeln("<pre>Average:"+avg+"</pre>");
+document.writeln("<pre>Grade:"+grade+"</pre>");
+document.writeln("<pre>Result:"+result+"</pre>");
+}
+</script>
+</body>
+</html>

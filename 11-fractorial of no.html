@@ -1,0 +1,40 @@
+Program 11 write a JavaScript calculate the fractorial of a number
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function factorial(){
+        var n =Number(document.getElementById("number").value);
+        var fact=1;
+        if(n<0){
+            alert("Please enter Positive negative Number");
+
+        }else{
+            for(i=n;i>=1;i--)
+            fact=fact*i;
+            alert("Fact is "+fact);
+        }
+    }
+</script>
+<body>
+    <center>
+        <form>
+            <table border="2" cellpadding="5" cellspacing="5">
+                <tr><td>Enter a number</td>
+                <td><input type="text" name="inputvalue" value="0" id="number"></td></tr>
+                <tr><td colspan="2" align="center">
+                    <input type="button" value="Factorial" name="Factorial" onclick="factorial()">
+                    </td></tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,43 @@
+Program 4
+Create a form for employee information and write JavaScript to find PF tax gross and net pay
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Employee details</title>
+    <script type="text/javascript" src="4.js" ></script>
+</head>
+<body>
+  <center> <h2>Employee Details</h2>
+  <hr/>
+  <br/>
+  <h4> Please fill in the following Employee details</h4> <br/>
+  <form name="employee">
+      <table>
+          <tr><td> Employee Name: </td>
+           <td> <input type="text" name="name"/></td>
+        </tr>
+  
+          <tr>
+              <td>Employee No:</td>
+              <td><input type="text" name="empno" /></td>
+          </tr>
+
+          <tr>
+              <td>Basic pay:</td>
+              <td> <input type="text" name="bpay"></td>
+          </tr>
+
+       
+    </table>
+
+    <input type="submit" name="btn" value="View Salary Details" onclick="calculate()"> 
+  </form>
+</center>
+</body>
+
+</html>

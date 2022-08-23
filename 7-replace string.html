@@ -1,0 +1,21 @@
+Program 7 Write a program to replace string using regular expression
+
+
+
+
+
+<html>
+<body>
+<p>Replace "Microsoft" with "Presidency" in the below phrase</p>
+<button onclick="myfn()">Replace</button>
+<p id="demo">Please visit Microsoft</p>
+<script>
+function myfn()
+{
+var str=document.getElementById("demo").innerHTML;
+var txt=str.replace(/Microsoft/,"Presidency");
+document.getElementById("demo").innerHTML=txt;
+}
+</script>
+</body>
+</html>

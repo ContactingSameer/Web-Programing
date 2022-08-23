@@ -1,0 +1,94 @@
+Program 2
+Develop an HTML form which accepts any mathematical expression
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithematic Operation</title>
+    <script type="text/javascript">
+        function calculate() {
+            var validinput = /[0-9,.,-]/
+            var op1 = document.mathform.op1.value;
+            var op2 = document.mathform.op2.value;
+            var operator = document.mathform.operator.value;
+            var result = 0;
+            if (op1.lenth == 0)
+                window.alert("please enter the first element");
+            else if (op2.lenth == 0)
+                window.alert("please enter the second element");
+            else if (op1.search(validinput) == -1)
+                window.alert("operand 1 is not a numeric value");
+            else if (op2.search(validinput) == -1)
+                window.alert("operand 2 is not a numeric value");
+            else {
+                var n1 = parseFloat(op1);
+                var n2 = parseFloat(op2);
+                switch (operator) {
+                    case "+": result = n1 + n2;
+                        break;
+                    case "-": result = n1 - n2;
+                        break;
+                    case "*": result = n1 * n2;
+                        break;
+                    case "/": result = n1 / n2;
+                        break;
+                    case "%": result = n1 % n2;
+                        break;
+                    case "exp": result = math.pow(n1, n2);
+                        break;
+                }
+                document.mathform.result.value = result;
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h2>arthimitic operations</h2>
+        <hr />
+        <br />
+        <form name="mathform">
+            <table border="1" cellpadding="5" cellspacing="5">
+                <tr>
+                    <th>enter thr first operand</th>
+                    <th>select the operation</th>
+                    <th>enter the second operand</th>
+                    <th>result</th>
+                </tr>
+
+                <tr>
+                    <td><input type="text" name="op1"></td>
+                    <td>
+                        <select name="operator">
+                            <option name="sum" value="+">+</option>
+                            <option name="diff" value="-">-</option>
+                            <option name="prod" value=""></option>
+                            <option name="div" value="/">/</option>
+                            <option name="mod" value="%">%</option>
+                            <option name="exp" value="exp">exp</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="op2" /></td>
+                    <td><input type="text" name="result" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" align="center">
+                        <input type="button" name="calresult" value="calculate" onclick="calculate()" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+
+</html>

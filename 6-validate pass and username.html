@@ -1,0 +1,33 @@
+Program 6
+Write a program to validate username and password
+
+
+
+
+
+
+<html>
+<head>
+<script type="text/javascript">
+function isvalid()
+{
+var password=document.getElementById("password").value;
+var username=document.getElementById("username").value;
+if (password=="123" && username=="bca")
+alert("correct");
+else
+alert("wrong");
+}
+</script>
+</head>
+<body>
+<h1>Validation Demo</h1>
+<form name="validate" action="">
+Username:
+<input type="text" id="username" name="username">
+Password:
+<input type="text" id="password" name="password">
+<input type="button" value="LogIn" onclick="isvalid()">
+</form>
+</body>
+</html>

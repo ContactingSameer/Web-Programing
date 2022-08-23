@@ -1,0 +1,56 @@
+Program 20 create a web page with dynamic effect then certain code to include layers and basic animation
+
+
+
+<html>
+<head>
+<title>Basic Animation</title>
+<script type="text/javascript"src="20.js"></script>
+<style type="text/css">
+#layer1
+{background-color:red;
+position:absolute;
+height:200px;
+width:200px;
+left:50px;
+top:200px;
+}
+#layer2
+{background-color:yellow;
+position:absolute;
+height:150px;
+width:150px;
+left:75px;
+top:225px;
+}
+#layer3
+{background-color:blue;
+position:absolute;
+height:100px;
+width:100px;
+left:100px;
+top:250px;
+}
+</style>
+</head>
+<body>
+<h2>Basic Animation</h2>
+<hr><br/>
+<p id="layer1">Layer1 is red color</p>
+<p id="layer2">Layer2 is yellow color</p>
+<p id="layer3">Layer3 is blue color</p>
+<form name="animationForm">
+<input type="button"name="ani1" value="Move red towards right"onclick="moveRed()"/>
+<input type="button"name="ani2" value="Move yellow towards right"onclick="moveYellow()"/>
+<input type="button"name="ani3" value="Move blue towards right"onclick="moveBlue()"/><br/>
+<input type="button"name="ani4" value="Show yellow layer"onclick="showYellow(true)"/>
+<input type="button"name="ani5" value="Hide yellow layer"onclick="showYellow(false)"/>
+</form>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+Program 10 create a page to display module position
+
+
+<html>
+<head>
+<title> mouse positions</title>
+<script type="text/javascript"> 
+function findMousePositions(evt)
+{
+document.getElementById("showXY").value=
+"Client X=" +evt.clientX+
+"Client Y=" +evt.clientY+ 
+"Screen X=" +evt.screenX+ 
+"Screen Y=" +evt.screenY;
+}
+</script>
+</head>
+<body onmousemove="findMousePositions(event)">
+<form>
+Mouse Positions are:<input type="text" id="showXY" size="50"/>
+</form>
+</body>
+</html>
